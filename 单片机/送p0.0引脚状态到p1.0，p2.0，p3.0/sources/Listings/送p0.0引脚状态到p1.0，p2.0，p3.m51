@@ -1,0 +1,75 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/18/2020  13:40:12  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE ..\outputs\ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3.0.obj TO ..\outputs\ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3
+>> .0 PRINT (.\Listings\ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  ..\outputs\ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3.0.obj (__P0_0__________P1_0__P2_0__P3_0)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  ..\outputs\ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3.0 (__P0_0__________P1_0__P2_0__P3_0)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     000FH     UNIT         ?PR?MAIN?__P0_0__________P1_0__P2_0__P3_0
+            CODE    0012H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   ..\outputs\ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3.0 (__P0_0__________P1_0__P2_0__P3_0)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?__P0_0__________P1_0__P2_0__...
+
+
+
+SYMBOL TABLE OF MODULE:  ..\outputs\ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3.0 (__P0_0__________P1_0__P2_0__P3_0)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        __P0_0__________P1_0__P2_0__P3_0
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:0080H.0       PUBLIC        P0_0
+  B:0090H.0       PUBLIC        P1_0
+  B:00A0H.0       PUBLIC        P2_0
+  B:00B0H.0       PUBLIC        P3_0
+  C:0003H         PUBLIC        main
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/18/2020  13:40:12  PAGE 2
+
+
+  C:0003H         LINE#         20
+  C:0003H         LINE#         21
+  C:0005H         LINE#         22
+  C:0009H         LINE#         23
+  C:000DH         LINE#         24
+  C:0011H         LINE#         25
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        __P0_0__________P1_0__P2_0__P3_0
+
+Program Size: data=9.0 xdata=0 code=30
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

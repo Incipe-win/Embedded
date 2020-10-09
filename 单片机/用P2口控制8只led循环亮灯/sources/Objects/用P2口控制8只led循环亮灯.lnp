@@ -1,0 +1,3 @@
+".\Objects\用P2口控制8只led循环亮灯.obj" 
+TO ".\Objects\用P2口控制8只led循环亮灯" 
+PRINT(".\Listings\用P2口控制8只led循环亮灯.m51")

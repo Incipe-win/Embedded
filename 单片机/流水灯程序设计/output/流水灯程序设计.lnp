@@ -1,0 +1,3 @@
+"..\output\流水灯程序设计.obj" 
+TO "..\output\流水灯程序设计" 
+PRINT(".\Listings\流水灯程序设计.m51")

@@ -1,0 +1,3 @@
+".\Objects\用按键S控制P1八个二极管.obj" 
+TO ".\Objects\用按键S控制P1八个二极管" 
+PRINT(".\Listings\用按键S控制P1八个二极管.m51")

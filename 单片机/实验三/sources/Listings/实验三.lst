@@ -1,0 +1,250 @@
+A51 MACRO ASSEMBLER  ______                                                               05/12/2020 15:13:56 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ʵ����.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE ʵ����.asm SET(SMALL) DEBUG PRINT(.\Listings\ʵ����.lst) OBJECT(.\Objec
+                      ts\ʵ����.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG     0000H
+0000 020030            2         LJMP    START
+0023                   3         ORG     0023H
+0023 020072            4         LJMP    SER
+                       5     
+0030                   6         ORG     0030H
+0030                   7     START:
+0030 759850            8         MOV     SCON, #01010000B   ; 串口方式1
+0033 D2AF              9         SETB    EA                 ; 开总中断
+0035 D2AC             10         SETB    ES                 ; 开串口中断
+0037 758920           11         MOV     TMOD, #00100000B   ; 定时器方式2 波特率发生器
+                      12         ; 初值
+003A 758DF3           13         MOV     TH1, #0F3H  
+003D 758BF3           14         MOV     TL1, #0F3H
+0040 D28E             15         SETB    TR1                ; T1开始运行
+0042 758700           16         MOV     PCON, #00          ; // 波特率不加倍位
+                      17         ;查表开始
+0045 7910             18         MOV     R1, #16
+0047 AA00             19         MOV     R2, 00H
+                      20     
+0049                  21     MAIN:
+0049 BA1002           22         CJNE    R2, #16, CONTINUE
+004C 7A00             23         MOV     R2, #00H
+004E                  24     CONTINUE:
+004E 900062           25         MOV     DPTR, #TABLE
+0051 EA               26         MOV     A, R2
+0052 93               27         MOVC    A, @A + DPTR
+0053 F5A0             28         MOV     P2, A
+0055 0A               29         INC     R2
+                      30         ; 查表结束
+0056 12007B           31         LCALL   DLY1S
+0059                  32     OUTPUT:
+                      33         ; 发送数据
+0059 F599             34         MOV     SBUF, A
+                      35         ; 数据是否发送完毕
+005B 3099FD           36         JNB     TI, $
+005E C299             37         CLR     TI
+0060 80E7             38         SJMP    MAIN 
+                      39     
+0062                  40     TABLE: 
+0062 3F065B4F         41         DB 3FH, 06H, 5BH, 4FH, 66H, 6DH, 7DH, 07H, 7FH, 6FH, 77H, 7CH, 58H, 5EH, 79H, 71H
+0066 666D7D07                
+006A 7F6F777C                
+006E 585E7971                
+                      42     
+0072                  43     SER:
+                      44         ; 接收数据
+0072 209800           45         JB      RI, LOOP
+0075                  46     LOOP:
+0075 C298             47         CLR     RI
+0077 8599A0           48         MOV     P2, SBUF
+007A 32               49         RETI
+                      50     
+                      51     ; 延时子程序
+007B                  52     DLY1S:
+007B 7D0A             53         MOV R5, #10          ;执行1次, 单周期指令
+007D                  54     DLY1:
+A51 MACRO ASSEMBLER  ______                                                               05/12/2020 15:13:56 PAGE     2
+
+007D 7EC8             55         MOV R6, #200         ;执行10次, 单周期指令
+007F                  56     DLY2:
+007F 7FF8             57         MOV R7, #248         ;执行 200 * 10 次, 单周期指令
+0081 DFFE             58         DJNZ R7, $           ;执行 2 * 248 * 200 * 10, 双周期指令, 所以要 × 2
+0083 DEFA             59         DJNZ R6, DLY2        ;执行 2 * 200 * 10, 双周期指令
+0085 DDF6             60         DJNZ R5, DLY1        ;执行 2 * 10, 双周期指令
+0087 22               61         RET                 ;双周期指令 2
+                      62         ;总时间 1 + 10 + 200 * 10 + 2 * 248 * 200 * 10 + 2 * 200 * 10 + 2 * 10 + 2 = 998033u
+                             s, 即延时1s
+                      63     END
+                             
+                             ;     ORG     0000H
+                             ;     LJMP    START
+                             ;     ORG     0023H
+                             ;     LJMP    SBR
+                             
+                             ;     ORG     0030H
+                             ; START:
+                             ;     MOV     SCON, #01010000B
+                             ;     SETB    EA
+                             ;     SETB    ES
+                             ;     MOV     TMOD, #00100000B
+                             ;     MOV     TH1, #0F3H
+                             ;     MOV     TL1, #0F3H
+                             ;     SETB    TR1
+                             ;                 ;BODE = 2400bps
+                             ;     MOV     PCON, #00
+                             ;     MOV     R4, #0
+                             ;     MOV     R1, #16
+                             ;     MOV     R2, 00H
+                             ;     ;前面都是初始化
+                             
+                             ; MAIN:
+                             ;     CJNE    R2, #16, CONTINUE
+                             ;     MOV     R2, #00H
+                             ; CONTINUE:
+                             ;     MOV     DPTR, #TABLE
+                             ;     MOV     A, R2
+                             ;     MOVC    A, @A + DPTR
+                             ;     MOV     P2, A
+                             ;     INC     R2
+                             ;     LCALL   DLY1S
+                             ;     ;
+                             ;     CJNE    R4, #0, LOOP
+                             ;     SJMP    MAIN 
+                             ; LOOP:
+                             ;     MOV     SBUF, A
+                             ; LOOP1:
+                             ;     JB            TI, LOOP1
+                             ;     CLR               TI
+                             ;     MOV     R4, #0
+                             ;     SJMP    MAIN
+                             
+                             ; TABLE: 
+                             ;     DB 3FH, 06H, 5BH, 4FH, 66H, 6DH, 7DH, 07H, 7FH, 6FH, 77H, 7CH, 58H, 5EH, 79H, 71H
+                             
+                             ; SBR:
+                             ;     MOV     P2, SBUF
+                             ;     CLR       RI
+                             ;     MOV     R4, #1
+                             ;     RETI
+                             
+                             ; DLY1S:
+                             ;     MOV R5, #10          ;执行1次, 单周期指令
+                             ; DLY1:
+                             ;     MOV R6, #200         ;执行10次, 单周期指令
+A51 MACRO ASSEMBLER  ______                                                               05/12/2020 15:13:56 PAGE     3
+
+                             ; DLY2:
+                             ;     MOV R7, #248         ;执行 200 * 10 次, 单周期指令
+                             ;     DJNZ R7, $           ;执行 2 * 248 * 200 * 10, 双周期指令, 所以要 × 2
+                             ;     DJNZ R6, DLY2        ;执行 2 * 200 * 10, 双周期指令
+                             ;     DJNZ R5, DLY1        ;执行 2 * 10, 双周期指令
+                             ;     RET                 ;双周期指令 2
+                             ;     ;总时间 1 + 10 + 200 * 10 + 2 * 248 * 200 * 10 + 2 * 200 * 10 + 2 * 10 + 2 = 99803
+                             3us, 即延时1s
+                             ; END
+                                     
+                             
+                             ;     ORG     0000H
+                             ;     LJMP    START
+                             ;     ORG     0023H
+                             ;     LJMP    SBR
+                             
+                             ;     ORG     0030H
+                             ; START:
+                             ;     MOV     SCON, #01010000B
+                             ;     SETB    EA
+                             ;     SETB    ES
+                             ;     MOV     TMOD, #00100000B
+                             ;     MOV     TH1, #0F3H
+                             ;     MOV     TL1, #0F3H
+                             ;     SETB    TR1
+                             ;                 ;BODE = 2400bps
+                             ;     MOV     PCON, #00
+                             ;     MOV     R4, #0
+                             ;     MOV     R1, #16
+                             ;     MOV     R2, 00H
+                             ;     ;前面都是初始化
+                             
+                             ; MAIN:
+                             ;     CJNE    R2, #16, CONTINUE
+                             ;     MOV     R2, #00H
+                             ; CONTINUE:
+                             ;     MOV     DPTR, #TABLE
+                             ;     MOV     A, R2
+                             ;     MOVC    A, @A + DPTR
+                             ;     MOV     P2, A
+                             ;     INC     R2
+                             ;     LCALL   DLY1S
+                             ;     ;
+                             ;     CJNE    R4, #0, LOOP
+                             ;     SJMP    MAIN 
+                             ; LOOP:
+                             ;     MOV     SBUF, A
+                             ;     MOV     R4, #0
+                             ;     SJMP    MAIN
+                             
+                             ; TABLE: 
+                             ;     DB 3FH, 06H, 5BH, 4FH, 66H, 6DH, 7DH, 07H, 7FH, 6FH, 77H, 7CH, 58H, 5EH, 79H, 71H
+                             
+                             ; SBR:
+                             ;     JB      RI, LOOP2
+                             ;     CLR     TI
+                             ; LOOP2:
+                             ;     CLR     RI
+                             ;     MOV     P2, SBUF
+                             ;     MOV     R4, #1
+                             ;     RETI
+                             
+                             ; DLY1S:
+                             ;     MOV R5, #10          ;执行1次, 单周期指令
+                             ; DLY1:
+                             ;     MOV R6, #200         ;执行10次, 单周期指令
+A51 MACRO ASSEMBLER  ______                                                               05/12/2020 15:13:56 PAGE     4
+
+                             ; DLY2:
+                             ;     MOV R7, #248         ;执行 200 * 10 次, 单周期指令
+                             ;     DJNZ R7, $           ;执行 2 * 248 * 200 * 10, 双周期指令, 所以要 × 2
+                             ;     DJNZ R6, DLY2        ;执行 2 * 200 * 10, 双周期指令
+                             ;     DJNZ R5, DLY1        ;执行 2 * 10, 双周期指令
+                             ;     RET                 ;双周期指令 2
+                             ;     ;总时间 1 + 10 + 200 * 10 + 2 * 248 * 200 * 10 + 2 * 200 * 10 + 2 * 10 + 2 = 99803
+                             3us, 即延时1s
+                             ; END
+A51 MACRO ASSEMBLER  ______                                                               05/12/2020 15:13:56 PAGE     5
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CONTINUE . . . . .  C ADDR   004EH   A   
+DLY1 . . . . . . .  C ADDR   007DH   A   
+DLY1S. . . . . . .  C ADDR   007BH   A   
+DLY2 . . . . . . .  C ADDR   007FH   A   
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+ES . . . . . . . .  B ADDR   00A8H.4 A   
+LOOP . . . . . . .  C ADDR   0075H   A   
+MAIN . . . . . . .  C ADDR   0049H   A   
+OUTPUT . . . . . .  C ADDR   0059H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+PCON . . . . . . .  D ADDR   0087H   A   
+RI . . . . . . . .  B ADDR   0098H.0 A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . .  D ADDR   0098H   A   
+SER. . . . . . . .  C ADDR   0072H   A   
+START. . . . . . .  C ADDR   0030H   A   
+TABLE. . . . . . .  C ADDR   0062H   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

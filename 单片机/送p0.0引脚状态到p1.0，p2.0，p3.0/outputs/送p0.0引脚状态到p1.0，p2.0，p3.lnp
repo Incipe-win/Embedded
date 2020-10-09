@@ -1,0 +1,3 @@
+"..\outputs\送p0.0引脚状态到p1.0，p2.0，p3.0.obj" 
+TO "..\outputs\送p0.0引脚状态到p1.0，p2.0，p3.0" 
+PRINT(".\Listings\送p0.0引脚状态到p1.0，p2.0，p3.m51")

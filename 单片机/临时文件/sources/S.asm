@@ -1,0 +1,8 @@
+	ORG 	0000H
+LOOP:
+	;MOV		@R0, #30H
+	MOV		R0, #30H
+	MOV		30H, #12H
+	MOV		A, @R0
+	AJMP	LOOP
+END

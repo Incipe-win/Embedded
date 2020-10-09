@@ -1,0 +1,55 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/21/2020  21:36:59  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE ..\output\流水灯程序设计.obj TO ..\output\流水灯程序设计 PRINT (.\Listings\流水灯程序设计.m5
+>> 1)
+
+
+INPUT MODULES INCLUDED:
+  ..\output\流水灯程序设计.obj (______________)
+
+
+LINK MAP OF MODULE:  ..\output\流水灯程序设计 (______________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0318H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  ..\output\流水灯程序设计 (______________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ______________
+  C:030BH         SYMBOL        DELAY
+  C:0311H         SYMBOL        DLOOP
+  C:030DH         SYMBOL        L1
+  C:0302H         SYMBOL        OUTPUT
+  D:0090H         SYMBOL        P1
+  C:0300H         SYMBOL        START
+  C:0000H         LINE#         2
+  C:0300H         LINE#         6
+  C:0302H         LINE#         9
+  C:0304H         LINE#         10
+  C:0305H         LINE#         11
+  C:0308H         LINE#         12
+  C:030BH         LINE#         15
+  C:030DH         LINE#         17
+  C:030FH         LINE#         18
+  C:0311H         LINE#         21
+  C:0313H         LINE#         22
+  C:0315H         LINE#         23
+  C:0317H         LINE#         24
+  -------         ENDMOD        ______________
+
+Program Size: data=8.0 xdata=0 code=792
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

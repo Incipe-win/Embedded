@@ -1,0 +1,100 @@
+C51 COMPILER V9.60.0.0   ______S__________________                                         04/19/2020 12:05:13 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE ______S__________________
+OBJECT MODULE PLACED IN .\Objects\用开关S控制实现蜂鸣器报警.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE 用开关S控制实现蜂鸣器报警.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND 
+                    -PRINT(.\Listings\用开关S控制实现蜂鸣器报警.lst) TABS(2) OBJECT(.\Objects\用开关S控制实现蜂鸣器报警.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          sbit S1 = P3 ^ 0;
+   4          sbit S2 = P3 ^ 1;
+   5          sbit sound = P1 ^ 0;
+   6          unsigned int keyval;
+   7          
+   8          void delay() {
+   9   1        unsigned int i;
+  10   1        //30ms
+  11   1        for (i = 0; i < 1000; ++i) {
+  12   2          ;
+  13   2        }
+  14   1      }
+  15          
+  16          void delay1000Hz() {
+  17   1        unsigned char i;
+  18   1        for (i = 0; i < 167; ++i) {
+  19   2          ;
+  20   2        }
+  21   1      }
+  22          
+  23          void delay500Hz() {
+  24   1        unsigned int i;
+  25   1        for (i = 0; i < 333; ++i) {
+  26   2          ;
+  27   2        }
+  28   1      }
+  29          
+  30          void sound1s() {
+  31   1        unsigned int i;
+  32   1        for (i = 0; i < 1000; ++i) {
+  33   2          sound = 0;
+  34   2          delay1000Hz();
+  35   2          sound = 1;
+  36   2          delay1000Hz();
+  37   2        }
+  38   1      }
+  39          
+  40          void soundBans() {
+  41   1        unsigned char i;
+  42   1        for (i = 0; i < 255; ++i) {
+  43   2          sound = 0;
+  44   2          delay500Hz();
+  45   2          sound = 1;
+  46   2          delay500Hz();
+  47   2        }
+  48   1      }
+  49          
+  50          void key_scan() {
+  51   1        if (S1 == 0) {
+  52   2          keyval = 1;
+  53   2        }
+  54   1        delay();
+C51 COMPILER V9.60.0.0   ______S__________________                                         04/19/2020 12:05:13 PAGE 2   
+
+  55   1        if (S2 == 0) {
+  56   2          keyval = 2;
+  57   2        }
+  58   1        delay();
+  59   1      }
+  60          
+  61          void main() {
+  62   1        keyval = 0;
+  63   1        while (1) {
+  64   2          key_scan();
+  65   2          switch(keyval) {
+  66   3            case 1:
+  67   3              sound1s();
+  68   3              break;
+  69   3            case 2:
+  70   3              soundBans();
+  71   3              break;
+  72   3          }
+  73   2        }
+  74   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    152    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

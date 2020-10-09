@@ -1,0 +1,92 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    05/06/2020  22:57:41  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\实验二asm.obj TO .\Objects\实验二 PRINT (.\Listings\实验二.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\实验二asm.obj (______ASM)
+
+
+LINK MAP OF MODULE:  .\Objects\实验二 (______ASM)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     006DH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\实验二 (______ASM)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ______ASM
+  D:00E0H         SYMBOL        ACC
+  C:004CH         SYMBOL        CONTINUE
+  C:0029H         SYMBOL        DLOOP
+  B:00A8H.7       SYMBOL        EA
+  B:00A8H.0       SYMBOL        EX0
+  B:00A8H.2       SYMBOL        EX1
+  C:002CH         SYMBOL        INT_0
+  C:003FH         SYMBOL        INT_1
+  B:0088H.0       SYMBOL        IT0
+  B:0088H.2       SYMBOL        IT1
+  D:0080H         SYMBOL        P0
+  D:00A0H         SYMBOL        P2
+  D:00D0H         SYMBOL        PSW
+  C:0016H         SYMBOL        START
+  C:005DH         SYMBOL        TABLE
+  C:0000H         LINE#         2
+  C:0003H         LINE#         4
+  C:0013H         LINE#         6
+  C:0016H         LINE#         9
+  C:0019H         LINE#         10
+  C:001BH         LINE#         11
+  C:001DH         LINE#         12
+  C:001FH         LINE#         13
+  C:0021H         LINE#         14
+  C:0023H         LINE#         15
+  C:0025H         LINE#         16
+  C:0027H         LINE#         17
+  C:0029H         LINE#         19
+  C:002CH         LINE#         22
+  C:002EH         LINE#         23
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/06/2020  22:57:41  PAGE 2
+
+
+  C:0030H         LINE#         24
+  C:0032H         LINE#         25
+  C:0034H         LINE#         26
+  C:0036H         LINE#         27
+  C:0038H         LINE#         28
+  C:003AH         LINE#         29
+  C:003CH         LINE#         30
+  C:003EH         LINE#         31
+  C:003FH         LINE#         34
+  C:0041H         LINE#         35
+  C:0043H         LINE#         36
+  C:0045H         LINE#         37
+  C:0047H         LINE#         38
+  C:004AH         LINE#         39
+  C:004CH         LINE#         41
+  C:004FH         LINE#         42
+  C:0050H         LINE#         43
+  C:0051H         LINE#         44
+  C:0053H         LINE#         45
+  C:0054H         LINE#         46
+  C:0056H         LINE#         47
+  C:0058H         LINE#         48
+  C:005AH         LINE#         49
+  C:005CH         LINE#         50
+  -------         ENDMOD        ______ASM
+
+Program Size: data=8.0 xdata=0 code=109
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

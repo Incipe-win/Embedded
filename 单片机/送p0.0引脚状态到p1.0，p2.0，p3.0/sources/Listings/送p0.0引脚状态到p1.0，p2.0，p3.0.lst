@@ -1,0 +1,25 @@
+C51 COMPILER V9.60.0.0   __P0_0__________P1_0__P2_0__P3_0                                  04/18/2020 13:40:12 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE __P0_0__________P1_0__P2_0__P3_0
+OBJECT MODULE PLACED IN ..\outputs\ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3.0.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3.0.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECT
+                    -EXTEND PRINT(.\Listings\ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3.0.lst) TABS(2) OBJECT(..\outputs\ËÍp0.0Òý½Å×´Ì¬µ½p1.0£¬p2.0£¬p3.0
+                    -.obj)
+
+line level    source
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     15    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

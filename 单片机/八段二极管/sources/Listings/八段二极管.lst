@@ -1,0 +1,67 @@
+A51 MACRO ASSEMBLER  __________                                                           03/21/2020 20:33:39 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\八段二极管.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE 八段二极管.asm SET(SMALL) DEBUG PRINT(.\Listings\八段二极管.lst) OBJECT
+                      (..\output\八段二极管.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG 0000
+0000 020100            2         LJMP    START
+                       3     
+0100                   4         ORG 0100H
+0100                   5     START:
+0100 75803F            6         MOV     P0, #3FH
+0103 12013E            7         LCALL   TIME
+0106 758006            8         MOV     P0, #06H
+0109 12013E            9         LCALL   TIME
+010C 75805B           10         MOV     P0, #5BH
+010F 12013E           11         LCALL   TIME
+0112 75804F           12         MOV     P0, #4FH
+0115 12013E           13         LCALL   TIME
+0118 758066           14         MOV     P0, #66H
+011B 12013E           15         LCALL   TIME
+011E 75806D           16         MOV     P0, #6DH
+0121 12013E           17         LCALL   TIME
+0124 75807D           18         MOV     P0, #7DH
+0127 12013E           19         LCALL   TIME
+012A 758007           20         MOV     P0, #07H
+012D 12013E           21         LCALL   TIME
+0130 75807F           22         MOV     P0, #7FH
+0133 12013E           23         LCALL   TIME
+0136 75806F           24         MOV     P0, #6FH
+0139 12013E           25         LCALL   TIME
+013C 80C2             26         SJMP    START
+                      27     
+013E                  28     TIME:
+013E 7DC8             29         MOV     R5, #200
+0140                  30     D1:
+0140 7E14             31         MOV     R6, #20
+0142                  32     D2:
+0142 7FF8             33         MOV     R7, #248
+0144 DFFE             34         DJNZ    R7, $
+0146 DEFA             35         DJNZ    R6, D2
+0148 DDF6             36         DJNZ    R5, D1
+014A 22               37         RET
+                      38         END
+A51 MACRO ASSEMBLER  __________                                                           03/21/2020 20:33:39 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+D1 . . . . . . . .  C ADDR   0140H   A   
+D2 . . . . . . . .  C ADDR   0142H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+START. . . . . . .  C ADDR   0100H   A   
+TIME . . . . . . .  C ADDR   013EH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,90 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/19/2020  11:49:45  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\用P2口控制8只led循环亮灯.obj TO .\Objects\用P2口控制8只led循环亮灯 PRINT (.\Listin
+>> gs\用P2口控制8只led循环亮灯.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\用P2口控制8只led循环亮灯.obj (__P2______8__LED________)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\用P2口控制8只led循环亮灯 (__P2______8__LED________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     001FH     UNIT         ?PR?DELAY?__P2______8__LED________
+            CODE    0022H     001EH     UNIT         ?PR?MAIN?__P2______8__LED________
+            CODE    0040H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\用P2口控制8只led循环亮灯 (__P2______8__LED________)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?__P2______8__LED________
+
+?PR?MAIN?__P2______8__LED________
+  +--> ?PR?DELAY?__P2______8__LED________
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\用P2口控制8只led循环亮灯 (__P2______8__LED________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        __P2______8__LED________
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:0003H         PUBLIC        delay
+  C:0022H         PUBLIC        main
+  -------         PROC          DELAY
+  -------         DO            
+  D:0007H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/19/2020  11:49:45  PAGE 2
+
+
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:0003H         LINE#         3
+  C:0003H         LINE#         5
+  C:000FH         LINE#         6
+  C:001BH         LINE#         8
+  C:001EH         LINE#         9
+  C:0021H         LINE#         10
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0005H         SYMBOL        i
+  -------         ENDDO         
+  C:0022H         LINE#         12
+  C:0022H         LINE#         14
+  C:0022H         LINE#         15
+  C:0025H         LINE#         16
+  C:0028H         LINE#         17
+  C:0034H         LINE#         18
+  C:003AH         LINE#         19
+  C:003DH         LINE#         20
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        __P2______8__LED________
+
+Program Size: data=9.0 xdata=0 code=76
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

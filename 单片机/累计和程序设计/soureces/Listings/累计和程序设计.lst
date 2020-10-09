@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  ______________                                                       03/21/2020 21:26:51 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\累计和程序设计.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE 累计和程序设计.asm SET(SMALL) DEBUG PRINT(.\Listings\累计和程序设计.lst
+                      ) OBJECT(..\output\累计和程序设计.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG 0000
+0000 020300            2         LJMP    ABC
+                       3     
+0300                   4         ORG 0300H
+0300                   5     ABC:
+0300 7F0A              6         MOV     R7, #10
+0302 7830              7         MOV     R0, #30H
+0304 E4                8         CLR     A
+0305                   9     LOOP:
+0305 26               10         ADD     A, @R0
+0306 08               11         INC     R0
+0307 DFFC             12         DJNZ    R7, LOOP
+0309 F53A             13         MOV     3AH, A
+030B 22               14         RET
+                      15         END
+A51 MACRO ASSEMBLER  ______________                                                       03/21/2020 21:26:51 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ABC. . . . . . . .  C ADDR   0300H   A   
+LOOP . . . . . . .  C ADDR   0305H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

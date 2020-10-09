@@ -1,0 +1,127 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/19/2020  10:57:21  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\用按键S控制P1八个二极管.obj TO .\Objects\用按键S控制P1八个二极管 PRINT (.\Listings
+>> \用按键S控制P1八个二极管.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\用按键S控制P1八个二极管.obj (______S____P1__________)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\用按键S控制P1八个二极管 (______S____P1__________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     006DH     UNIT         ?PR?MAIN?______S____P1__________
+            CODE    0070H     001FH     UNIT         ?PR?DELAY?______S____P1__________
+            CODE    008FH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\用按键S控制P1八个二极管 (______S____P1__________)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?______S____P1__________
+
+?PR?MAIN?______S____P1__________
+  +--> ?PR?DELAY?______S____P1__________
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\用按键S控制P1八个二极管 (______S____P1__________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ______S____P1__________
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:0070H         PUBLIC        delay
+  C:0003H         PUBLIC        main
+  B:00B0H.0       PUBLIC        S
+  -------         PROC          DELAY
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/19/2020  10:57:21  PAGE 2
+
+
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:0070H         LINE#         5
+  C:0070H         LINE#         7
+  C:007CH         LINE#         8
+  C:0088H         LINE#         10
+  C:008BH         LINE#         11
+  C:008EH         LINE#         12
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0005H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         14
+  C:0003H         LINE#         15
+  C:0005H         LINE#         16
+  C:0005H         LINE#         17
+  C:0008H         LINE#         18
+  C:000BH         LINE#         19
+  C:000BH         LINE#         21
+  C:000EH         LINE#         22
+  C:000FH         LINE#         23
+  C:000FH         LINE#         24
+  C:0014H         LINE#         25
+  C:0016H         LINE#         26
+  C:0016H         LINE#         27
+  C:0043H         LINE#         28
+  C:0043H         LINE#         29
+  C:0046H         LINE#         30
+  C:0048H         LINE#         31
+  C:0048H         LINE#         32
+  C:004BH         LINE#         33
+  C:004DH         LINE#         34
+  C:004DH         LINE#         35
+  C:0050H         LINE#         36
+  C:0052H         LINE#         37
+  C:0052H         LINE#         38
+  C:0055H         LINE#         39
+  C:0057H         LINE#         40
+  C:0057H         LINE#         41
+  C:005AH         LINE#         42
+  C:005CH         LINE#         43
+  C:005CH         LINE#         44
+  C:005FH         LINE#         45
+  C:0061H         LINE#         46
+  C:0061H         LINE#         47
+  C:0064H         LINE#         48
+  C:0066H         LINE#         49
+  C:0066H         LINE#         50
+  C:0069H         LINE#         51
+  C:006BH         LINE#         52
+  C:006BH         LINE#         53
+  C:006EH         LINE#         54
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        ______S____P1__________
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/19/2020  10:57:21  PAGE 3
+
+
+
+Program Size: data=9.0 xdata=0 code=155
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

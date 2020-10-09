@@ -1,0 +1,57 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    05/12/2020  15:13:57  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\实验三.obj TO .\Objects\实验三 PRINT (.\Listings\实验三.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\实验三.obj (______)
+
+
+LINK MAP OF MODULE:  .\Objects\实验三 (______)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0088H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\实验三 (______)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ______
+  C:004EH         SYMBOL        CONTINUE
+  C:007DH         SYMBOL        DLY1
+  C:007BH         SYMBOL        DLY1S
+  C:007FH         SYMBOL        DLY2
+  B:00A8H.7       SYMBOL        EA
+  B:00A8H.4       SYMBOL        ES
+  C:0075H         SYMBOL        LOOP
+  C:0049H         SYMBOL        MAIN
+  C:0059H         SYMBOL        OUTPUT
+  D:00A0H         SYMBOL        P2
+  D:0087H         SYMBOL        PCON
+  B:0098H.0       SYMBOL        RI
+  D:0099H         SYMBOL        SBUF
+  D:0098H         SYMBOL        SCON
+  C:0072H         SYMBOL        SER
+  C:0030H         SYMBOL        START
+  C:0062H         SYMBOL        TABLE
+  D:008DH         SYMBOL        TH1
+  B:0098H.1       SYMBOL        TI
+  D:008BH         SYMBOL        TL1
+  D:0089H         SYMBOL        TMOD
+  B:0088H.6       SYMBOL        TR1
+  -------         ENDMOD        ______
+
+Program Size: data=8.0 xdata=0 code=136
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

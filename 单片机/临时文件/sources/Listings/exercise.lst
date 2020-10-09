@@ -1,0 +1,48 @@
+A51 MACRO ASSEMBLER  EXERCISE                                                             03/31/2020 14:21:27 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\exercise.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE exercise.asm SET(SMALL) DEBUG PRINT(.\Listings\exercise.lst) OBJECT(..\
+                      output\exercise.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     LOOP:
+0000 7412              2         MOV A, #12H         ;A = 12H
+0002 7824              3         MOV R0, #24H        ;R0 = 24H
+0004 752156            4         MOV 21H, #56H       ;(21H) = 56H
+0007 2412              5         ADD A, #12H         ;A = A + 12H = 24H
+0009 904316            6         MOV DPTR, #4316H    ;DPTR = 4316H
+000C 2583              7         ADD A, DPH          ;A = A + 43H = 67H
+000E 28                8         ADD A, R0           ;A = A + R0 = 91H
+000F C3                9         CLR C               ;CY = 0
+0010 9582             10         SUBB A, DPL         ;A = A - 16H = 75H
+0012 9425             11         SUBB A, #25H        ;A = A - 25H = 50H
+0014 04               12         INC A               ;A = A + 1 = 51H
+0015 D3               13         SETB C              ;CY = 1
+0016 3521             14         ADDC A, 21H         ;A = A + 56H + CY = 108H
+0018 08               15         INC R0              ;R0 = 25H
+0019 98               16         SUBB A, R0          ;A = A - 25H - 1 = 
+001A 752416           17         MOV 24H, #16H
+001D C3               18         CLR C
+001E 26               19         ADD A, @R0
+001F 0100             20         AJMP LOOP
+                      21     END
+A51 MACRO ASSEMBLER  EXERCISE                                                             03/31/2020 14:21:27 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+LOOP . . . . . . .  C ADDR   0000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

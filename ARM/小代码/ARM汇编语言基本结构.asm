@@ -1,0 +1,10 @@
+    AREA Init, CODE, READONLY
+    ENTRY
+START
+    LDR R0, =0X3FF5000
+    LDR R1, 0XFF
+    STR R1, [R0]
+    LDR R0, =0X3FF5008
+    LDR R1, 0X01
+    STR R1, [R0]
+    END

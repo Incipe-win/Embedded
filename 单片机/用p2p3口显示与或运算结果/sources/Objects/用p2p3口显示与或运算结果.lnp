@@ -1,0 +1,3 @@
+".\Objects\用p2p3口显示与或运算结果.obj" 
+TO ".\Objects\用p2p3口显示与或运算结果" 
+PRINT(".\Listings\用p2p3口显示与或运算结果.m51")

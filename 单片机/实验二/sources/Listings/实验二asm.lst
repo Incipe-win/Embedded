@@ -1,0 +1,96 @@
+A51 MACRO ASSEMBLER  ______ASM                                                            05/06/2020 22:57:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\实验二asm.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE 实验二asm.asm SET(SMALL) DEBUG PRINT(.\Listings\实验二asm.lst) OBJECT(.
+                      \Objects\实验二asm.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG     0000H
+0000 020016            2         LJMP    START
+0003                   3         ORG     0003H
+0003 02002C            4         LJMP    INT_0
+0013                   5         ORG     0013H
+0013 02003F            6         LJMP    INT_1
+                       7     
+0016                   8     START:
+0016 8500A0            9         MOV     P2, 00000000B
+0019 D284             10         SETB        P0.4
+001B D2AF             11         SETB    EA
+001D D2A8             12         SETB    EX0
+001F D2AA             13         SETB    EX1
+0021 D28A             14         SETB    IT1
+0023 D288             15         SETB    IT0
+0025 7910             16             MOV     R1, #16
+0027 AA00             17         MOV     R2, 00H
+0029                  18     DLOOP:
+0029 020029           19         LJMP   DLOOP
+                      20     
+002C                  21     INT_0:
+002C C2AF             22         CLR     EA          ;关中断
+002E C0D0             23             PUSH    PSW             ;保护现场
+0030 C0E0             24             PUSH    ACC
+0032 D2AF             25             SETB    EA              ;开中断
+0034 B284             26         CPL     P0.4        ;中断子程序段
+0036 C2AF             27         CLR     EA          ;关中断
+0038 D0E0             28             POP             ACC             ;恢复现场
+003A D0D0             29             POP             PSW
+003C D2AF             30         SETB    EA          ;开中断
+003E 32               31         RETI                        ;中断返回
+                      32     
+003F                  33     INT_1:
+003F C2AF             34         CLR     EA          ;关中断
+0041 C0D0             35             PUSH    PSW             ;保护现场
+0043 C0E0             36             PUSH    ACC
+0045 D2AF             37             SETB    EA              ;开中断
+0047 BA1002           38         CJNE    R2, #16, CONTINUE
+004A 7A00             39         MOV     R2, #00H
+004C                  40     CONTINUE:
+004C 90005D           41         MOV     DPTR, #TABLE
+004F EA               42         MOV     A, R2
+0050 93               43         MOVC    A, @A + DPTR
+0051 F5A0             44         MOV     P2, A
+0053 0A               45         INC     R2
+0054 C2AF             46         CLR     EA          ;关中断
+0056 D0E0             47             POP             ACC             ;恢复现场
+0058 D0D0             48             POP             PSW
+005A D2AF             49         SETB    EA          ;开中断
+005C 32               50         RETI                        ;中断返回
+                      51     
+005D                  52     TABLE: 
+005D 3F065B4F         53         DB 3FH, 06H, 5BH, 4FH, 66H, 6DH, 7DH, 07H, 7FH, 6FH, 77H, 7CH, 58H, 5EH, 79H, 71H
+0061 666D7D07                
+0065 7F6F777C                
+0069 585E7971                
+                      54     END
+A51 MACRO ASSEMBLER  ______ASM                                                            05/06/2020 22:57:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+CONTINUE . . . . .  C ADDR   004CH   A   
+DLOOP. . . . . . .  C ADDR   0029H   A   
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+EX0. . . . . . . .  B ADDR   00A8H.0 A   
+EX1. . . . . . . .  B ADDR   00A8H.2 A   
+INT_0. . . . . . .  C ADDR   002CH   A   
+INT_1. . . . . . .  C ADDR   003FH   A   
+IT0. . . . . . . .  B ADDR   0088H.0 A   
+IT1. . . . . . . .  B ADDR   0088H.2 A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+PSW. . . . . . . .  D ADDR   00D0H   A   
+START. . . . . . .  C ADDR   0016H   A   
+TABLE. . . . . . .  C ADDR   005DH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

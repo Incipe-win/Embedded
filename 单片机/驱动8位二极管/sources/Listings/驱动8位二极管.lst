@@ -1,0 +1,43 @@
+A51 MACRO ASSEMBLER  ____8________                                                        03/31/2020 10:31:31 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\驱动8位二极管.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE 驱动8位二极管.asm SET(SMALL) DEBUG PRINT(.\Listings\驱动8位二极管.lst) 
+                      OBJECT(..\output\驱动8位二极管.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 74FE              1         MOV     A, #0FEH
+0002                   2     UP:
+0002 F590              3         MOV     P1, A
+0004 12000A            4         LCALL   DELAY
+0007 23                5         RL      A
+0008 80F8              6         SJMP    UP
+                       7     
+000A                   8     DELAY:
+000A 7F02              9         MOV     R7, #2
+000C                  10     DELAY11:
+000C 7EFA             11         MOV     R6, #250
+000E DEFE             12         DJNZ    R6, $
+0010 DFFA             13         DJNZ    R7, DELAY11
+0012 22               14         RET
+                      15     END
+A51 MACRO ASSEMBLER  ____8________                                                        03/31/2020 10:31:31 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .  C ADDR   000AH   A   
+DELAY11. . . . . .  C ADDR   000CH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+UP . . . . . . . .  C ADDR   0002H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

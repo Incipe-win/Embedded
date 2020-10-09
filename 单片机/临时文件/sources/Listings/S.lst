@@ -1,0 +1,32 @@
+A51 MACRO ASSEMBLER  S                                                                    03/31/2020 11:45:54 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\S.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE S.asm SET(SMALL) DEBUG PRINT(.\Listings\S.lst) OBJECT(..\output\S.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1             ORG     0000H
+0000                   2     LOOP:
+                       3             ;MOV            @R0, #30H
+0000 7830              4             MOV             R0, #30H
+0002 753012            5             MOV             30H, #12H
+0005 E6                6             MOV             A, @R0
+0006 0100              7             AJMP    LOOP
+                       8     END
+A51 MACRO ASSEMBLER  S                                                                    03/31/2020 11:45:54 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP . . . . . . .  C ADDR   0000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

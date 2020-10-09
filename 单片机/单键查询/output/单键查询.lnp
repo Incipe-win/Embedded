@@ -1,0 +1,3 @@
+"..\output\单键查询.obj" 
+TO "..\output\单键查询" 
+PRINT(".\Listings\单键查询.m51")

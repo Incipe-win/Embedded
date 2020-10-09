@@ -1,0 +1,3 @@
+".\Objects\用p2，p3口显示加减结果.obj" 
+TO ".\Objects\用p2，p3口显示加减结果" 
+PRINT(".\Listings\用p2，p3口显示加减结果.m51")

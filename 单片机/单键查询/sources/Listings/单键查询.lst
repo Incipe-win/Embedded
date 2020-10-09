@@ -1,0 +1,57 @@
+A51 MACRO ASSEMBLER  ________                                                             03/21/2020 20:56:03 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\单键查询.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE 单键查询.asm SET(SMALL) DEBUG PRINT(.\Listings\单键查询.lst) OBJECT(..\
+                      output\单键查询.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG     0000
+0000 020030            2         LJMP    START
+                       3     
+0030                   4         ORG     0030H
+0030                   5     START:
+0030 D290              6         SETB    P1.0
+0032 209005            7         JB      P1.0, ABC
+0035 7590CF            8         MOV     P1, #11001111B
+0038 80F6              9         SJMP    START
+003A                  10     ABC:
+003A 75900F           11         MOV     P1, #00001111B
+003D 120048           12         LCALL   TIME
+0040 7590FF           13         MOV     P1, #11111111B
+0043 120048           14         LCALL   TIME
+0046 80E8             15         SJMP    START
+                      16     
+0048                  17     TIME:
+0048 7DC8             18         MOV     R5, #200
+004A                  19     D1:
+004A 7E14             20         MOV     R6, #20
+004C                  21     D2:
+004C 7FF8             22         MOV     R7, #248
+004E DFFE             23         DJNZ    R7, $
+0050 DEFA             24         DJNZ    R6, D2
+0052 DDF6             25         DJNZ    R5, D1
+0054 22               26         RET
+                      27         END
+A51 MACRO ASSEMBLER  ________                                                             03/21/2020 20:56:03 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ABC. . . . . . . .  C ADDR   003AH   A   
+D1 . . . . . . . .  C ADDR   004AH   A   
+D2 . . . . . . . .  C ADDR   004CH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+START. . . . . . .  C ADDR   0030H   A   
+TIME . . . . . . .  C ADDR   0048H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

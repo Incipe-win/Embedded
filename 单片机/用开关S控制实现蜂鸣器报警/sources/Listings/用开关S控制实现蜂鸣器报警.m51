@@ -1,0 +1,172 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/19/2020  12:05:14  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\用开关S控制实现蜂鸣器报警.obj TO .\Objects\用开关S控制实现蜂鸣器报警 PRINT (.\List
+>> ings\用开关S控制实现蜂鸣器报警.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\用开关S控制实现蜂鸣器报警.obj (______S__________________)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\用开关S控制实现蜂鸣器报警 (______S__________________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?______S__________________
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     001FH     UNIT         ?PR?MAIN?______S__________________
+            CODE    0022H     001AH     UNIT         ?PR?SOUNDBANS?______S__________________
+            CODE    003CH     0019H     UNIT         ?PR?SOUND1S?______S__________________
+            CODE    0055H     0018H     UNIT         ?PR?KEY_SCAN?______S__________________
+            CODE    006DH     0010H     UNIT         ?PR?DELAY1000HZ?______S__________________
+            CODE    007DH     000FH     UNIT         ?PR?DELAY?______S__________________
+            CODE    008CH     000FH     UNIT         ?PR?DELAY500HZ?______S__________________
+            CODE    009BH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\用开关S控制实现蜂鸣器报警 (______S__________________)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?______S__________________
+
+?PR?MAIN?______S__________________
+  +--> ?PR?KEY_SCAN?______S__________________
+  +--> ?PR?SOUND1S?______S__________________
+  +--> ?PR?SOUNDBANS?______S__________________
+
+?PR?KEY_SCAN?______S__________________
+  +--> ?PR?DELAY?______S__________________
+
+?PR?SOUND1S?______S__________________
+  +--> ?PR?DELAY1000HZ?______S______________...
+
+?PR?SOUNDBANS?______S__________________
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/19/2020  12:05:14  PAGE 2
+
+
+  +--> ?PR?DELAY500HZ?______S__________________
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\用开关S控制实现蜂鸣器报警 (______S__________________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ______S__________________
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:00B0H.0       PUBLIC        S1
+  B:00B0H.1       PUBLIC        S2
+  D:0008H         PUBLIC        keyval
+  C:007DH         PUBLIC        delay
+  C:006DH         PUBLIC        delay1000Hz
+  C:0003H         PUBLIC        main
+  B:0090H.0       PUBLIC        sound
+  C:0022H         PUBLIC        soundBans
+  C:003CH         PUBLIC        sound1s
+  C:0055H         PUBLIC        key_scan
+  C:008CH         PUBLIC        delay500Hz
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:007DH         LINE#         8
+  C:007DH         LINE#         11
+  C:0080H         LINE#         13
+  C:008BH         LINE#         14
+  -------         ENDPROC       DELAY
+  -------         PROC          DELAY1000HZ
+  -------         DO            
+  D:0007H         SYMBOL        i
+  -------         ENDDO         
+  C:006DH         LINE#         16
+  C:006DH         LINE#         18
+  C:0079H         LINE#         20
+  C:007CH         LINE#         21
+  -------         ENDPROC       DELAY1000HZ
+  -------         PROC          DELAY500HZ
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:008CH         LINE#         23
+  C:008CH         LINE#         25
+  C:008FH         LINE#         27
+  C:009AH         LINE#         28
+  -------         ENDPROC       DELAY500HZ
+  -------         PROC          SOUND1S
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:003CH         LINE#         30
+  C:003CH         LINE#         32
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/19/2020  12:05:14  PAGE 3
+
+
+  C:003FH         LINE#         33
+  C:0041H         LINE#         34
+  C:0044H         LINE#         35
+  C:0046H         LINE#         36
+  C:0049H         LINE#         37
+  C:0054H         LINE#         38
+  -------         ENDPROC       SOUND1S
+  -------         PROC          SOUNDBANS
+  -------         DO            
+  D:0005H         SYMBOL        i
+  -------         ENDDO         
+  C:0022H         LINE#         40
+  C:0022H         LINE#         42
+  C:002EH         LINE#         43
+  C:0030H         LINE#         44
+  C:0033H         LINE#         45
+  C:0035H         LINE#         46
+  C:0038H         LINE#         47
+  C:003BH         LINE#         48
+  -------         ENDPROC       SOUNDBANS
+  -------         PROC          KEY_SCAN
+  C:0055H         LINE#         50
+  C:0055H         LINE#         51
+  C:0058H         LINE#         52
+  C:005EH         LINE#         53
+  C:005EH         LINE#         54
+  C:0061H         LINE#         55
+  C:0064H         LINE#         56
+  C:006AH         LINE#         57
+  C:006AH         LINE#         58
+  -------         ENDPROC       KEY_SCAN
+  -------         PROC          MAIN
+  C:0003H         LINE#         61
+  C:0003H         LINE#         62
+  C:0008H         LINE#         63
+  C:0008H         LINE#         64
+  C:000BH         LINE#         65
+  C:0018H         LINE#         66
+  C:0018H         LINE#         67
+  C:001BH         LINE#         68
+  C:001DH         LINE#         69
+  C:001DH         LINE#         70
+  C:0020H         LINE#         71
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        ______S__________________
+
+Program Size: data=11.0 xdata=0 code=167
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

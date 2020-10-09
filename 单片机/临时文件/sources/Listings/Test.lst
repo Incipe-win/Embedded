@@ -1,0 +1,49 @@
+A51 MACRO ASSEMBLER  TEST                                                                 03/31/2020 11:38:10 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\Test.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE Test.asm SET(SMALL) DEBUG PRINT(.\Listings\Test.lst) OBJECT(..\output\T
+                      est.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG 0000
+0000 758170            2             MOV             SP, #70H
+0003 028000            3         LJMP    START
+                       4     
+8000                   5         ORG 8000H
+8000                   6     START:
+8000 128100            7         LCALL       DELAY
+8003 7D06              8             MOV             R5, #6
+                       9             
+8100                  10             ORG 8100H
+8100                  11     DELAY:
+8100 7DC8             12                 MOV     R5, #200
+8102 22               13                     RET
+                      14             ; D1:
+                      15             ;       MOV     R6, #20
+                      16             ; D2:
+                      17             ;       MOV     R7, #248
+                      18             ;       DJNZ    R7, $
+                      19             ;       DJNZ    R6, D2
+                      20             ;       DJNZ    R5, D1
+                      21             ;       RET
+                      22         END
+A51 MACRO ASSEMBLER  TEST                                                                 03/31/2020 11:38:10 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .  C ADDR   8100H   A   
+SP . . . . . . . .  D ADDR   0081H   A   
+START. . . . . . .  C ADDR   8000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

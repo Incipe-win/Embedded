@@ -1,0 +1,24 @@
+C51 COMPILER V9.60.0.0   ______2                                                           05/08/2020 16:55:06 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE ______2
+OBJECT MODULE PLACED IN .\Objects\สตั้ศý2.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE สตั้ศý2.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\ส
+                    -ตั้ศý2.lst) TABS(2) OBJECT(.\Objects\สตั้ศý2.obj)
+
+line level    source
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     44    ----
+   CONSTANT SIZE    =     16    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

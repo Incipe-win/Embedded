@@ -1,0 +1,65 @@
+A51 MACRO ASSEMBLER  ________________                                                     03/21/2020 21:51:35 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\多键查询程序设计.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE 多键查询程序设计.asm SET(SMALL) DEBUG PRINT(.\Listings\多键查询程序设计
+                      .lst) OBJECT(..\output\多键查询程序设计.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG 0000H
+0000 020030            2         LJMP    START
+                       3     
+0030                   4         ORG 0030H
+                       5     
+0030                   6     START:
+0030 D290              7         SETB    P1.0
+0032 D291              8         SETB    P1.1
+0034 E590              9         MOV     A, P1
+0036 5403             10         ANL     A, #03H
+0038 23               11         RL      A
+0039 90003D           12         MOV     DPTR, #TABL
+003C 73               13         JMP     @A+DPTR
+                      14     
+003D                  15     TABL:
+003D 0145             16         AJMP    CS0
+003F 014A             17         AJMP    CS1
+0041 014F             18         AJMP    CS2
+0043 0154             19         AJMP    CS3
+                      20     
+0045                  21     CS0:
+0045 7590EF           22         MOV     P1, #11101111B
+0048 80E6             23         SJMP    START
+004A                  24     CS1:
+004A 7590DF           25         MOV     P1, #11011111B
+004D 80E1             26         SJMP    START
+004F                  27     CS2:
+004F 7590BF           28         MOV     P1, #10111111B
+0052 80DC             29         SJMP    START
+0054                  30     CS3:
+0054 75907F           31         MOV     P1, #01111111B
+0057 80D7             32         SJMP    START
+                      33         
+                      34         END
+A51 MACRO ASSEMBLER  ________________                                                     03/21/2020 21:51:35 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CS0. . . . . . . .  C ADDR   0045H   A   
+CS1. . . . . . . .  C ADDR   004AH   A   
+CS2. . . . . . . .  C ADDR   004FH   A   
+CS3. . . . . . . .  C ADDR   0054H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+START. . . . . . .  C ADDR   0030H   A   
+TABL . . . . . . .  C ADDR   003DH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

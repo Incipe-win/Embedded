@@ -1,0 +1,100 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/19/2020  11:32:23  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\用数组实现p1口8个led显示状态.obj TO .\Objects\用数组实现p1口8个led显示状态 PRINT (
+>> .\Listings\用数组实现p1口8个led显示状态.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\用数组实现p1口8个led显示状态.obj (__________P1__8__LED________)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+
+
+LINK MAP OF MODULE:  .\Objects\用数组实现p1口8个led显示状态 (__________P1__8__LED________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0003H     UNIT         _DATA_GROUP_
+            IDATA   000BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     002DH     UNIT         ?C?LIB_CODE
+            CODE    0030H     002BH     UNIT         ?PR?MAIN?__________P1__8__LED________
+            CODE    005BH     001FH     UNIT         ?PR?DELAY?__________P1__8__LED________
+            CODE    007AH     0013H     UNIT         ?CO?__________P1__8__LED________
+            CODE    008DH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\用数组实现p1口8个led显示状态 (__________P1__8__LED________)
+
+
+SEGMENT                                          DATA_GROUP 
+  +--> CALLED SEGMENT                          START    LENGTH
+--------------------------------------------------------------
+?C_C51STARTUP                                  -----    -----
+  +--> ?PR?MAIN?__________P1__8__LED________
+
+?PR?MAIN?__________P1__8__LED________          0008H    0003H
+  +--> ?CO?__________P1__8__LED________
+  +--> ?PR?DELAY?__________P1__8__LED________
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\用数组实现p1口8个led显示状态 (__________P1__8__LED________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        __________P1__8__LED________
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/19/2020  11:32:23  PAGE 2
+
+
+  C:005BH         PUBLIC        delay
+  C:0030H         PUBLIC        main
+  -------         PROC          DELAY
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:005BH         LINE#         32
+  C:005BH         LINE#         34
+  C:0067H         LINE#         35
+  C:0073H         LINE#         37
+  C:0076H         LINE#         38
+  C:0079H         LINE#         39
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0005H         SYMBOL        i
+  C:007AH         SYMBOL        Tab
+  D:0008H         SYMBOL        p
+  -------         ENDDO         
+  C:0030H         LINE#         41
+  C:0030H         LINE#         45
+  C:0039H         LINE#         46
+  C:0039H         LINE#         47
+  C:0045H         LINE#         48
+  C:0055H         LINE#         49
+  C:0058H         LINE#         50
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        __________P1__8__LED________
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0003H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+Program Size: data=12.0 xdata=0 code=153
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

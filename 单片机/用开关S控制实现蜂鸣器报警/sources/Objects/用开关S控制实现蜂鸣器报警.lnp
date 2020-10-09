@@ -1,0 +1,3 @@
+".\Objects\用开关S控制实现蜂鸣器报警.obj" 
+TO ".\Objects\用开关S控制实现蜂鸣器报警" 
+PRINT(".\Listings\用开关S控制实现蜂鸣器报警.m51")

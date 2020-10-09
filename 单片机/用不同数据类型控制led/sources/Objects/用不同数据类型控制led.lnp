@@ -1,0 +1,3 @@
+".\Objects\用不同数据类型控制led.obj" 
+TO ".\Objects\用不同数据类型控制led" 
+PRINT(".\Listings\用不同数据类型控制led.m51")

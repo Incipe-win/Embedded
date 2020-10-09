@@ -1,0 +1,68 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/19/2020  10:28:23  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\用p2p3口显示与或运算结果.obj TO .\Objects\用p2p3口显示与或运算结果 PRINT (.\Listin
+>> gs\用p2p3口显示与或运算结果.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\用p2p3口显示与或运算结果.obj (__P2P3__________________)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\用p2p3口显示与或运算结果 (__P2P3__________________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     000CH     UNIT         ?C_C51STARTUP
+            CODE    000FH     0008H     UNIT         ?PR?MAIN?__P2P3__________________
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\用p2p3口显示与或运算结果 (__P2P3__________________)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?__P2P3__________________
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\用p2p3口显示与或运算结果 (__P2P3__________________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        __P2P3__________________
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:000FH         PUBLIC        main
+  -------         PROC          MAIN
+  C:000FH         LINE#         12
+  C:000FH         LINE#         13
+  C:0012H         LINE#         14
+  C:0015H         LINE#         15
+  C:0015H         LINE#         17
+  -------         ENDPROC       MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/19/2020  10:28:23  PAGE 2
+
+
+  -------         ENDMOD        __P2P3__________________
+
+Program Size: data=9.0 xdata=0 code=23
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,74 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/18/2020  14:13:24  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\ÓÃp2£¬p3¿ÚÏÔÊ¾¼Ó¼õ½á¹û.obj TO .\Objects\ÓÃp2£¬p3¿ÚÏÔÊ¾¼Ó¼õ½á¹û PRINT (.\Listings\Ó
+>> Ãp2£¬p3¿ÚÏÔÊ¾¼Ó¼õ½á¹û.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\ÓÃp2£¬p3¿ÚÏÔÊ¾¼Ó¼õ½á¹û.obj (__P2__P3______________)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\ÓÃp2£¬p3¿ÚÏÔÊ¾¼Ó¼õ½á¹û (__P2__P3______________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     000FH     UNIT         ?PR?MAIN?__P2__P3______________
+            CODE    0012H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\ÓÃp2£¬p3¿ÚÏÔÊ¾¼Ó¼õ½á¹û (__P2__P3______________)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?__P2__P3______________
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\ÓÃp2£¬p3¿ÚÏÔÊ¾¼Ó¼õ½á¹û (__P2__P3______________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        __P2__P3______________
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:0003H         PUBLIC        main
+  -------         PROC          MAIN
+  -------         DO            
+  D:0007H         SYMBOL        a
+  D:0006H         SYMBOL        b
+  -------         ENDDO         
+  C:0003H         LINE#         3
+  C:0003H         LINE#         6
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/18/2020  14:13:24  PAGE 2
+
+
+  C:0005H         LINE#         7
+  C:0007H         LINE#         9
+  C:000BH         LINE#         10
+  C:0010H         LINE#         11
+  C:0010H         LINE#         13
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        __P2__P3______________
+
+Program Size: data=9.0 xdata=0 code=30
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

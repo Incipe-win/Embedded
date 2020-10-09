@@ -1,0 +1,61 @@
+A51 MACRO ASSEMBLER  __________                                                           05/07/2020 21:21:10 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\流水灯定时.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE 流水灯定时.asm SET(SMALL) DEBUG PRINT(.\Listings\流水灯定时.lst) OBJECT
+                      (.\Objects\流水灯定时.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG     0000H
+0000 020100            2         LJMP    START
+000B                   3         ORG     000BH
+000B 020119            4         LJMP    TIMER0
+                       5     
+0100                   6         ORG     0100H
+0100                   7     START:
+0100 758901            8         MOV     TMOD, #00000001B
+0103 758C3C            9         MOV     TH0, #3CH
+0106 758AB0           10         MOV     TL0, #0B0H 
+0109 74FE             11         MOV     A, #0FEH
+010B 7814             12         MOV     R0, #20
+010D 75A882           13         MOV     IE, #10000010B
+0110 75B802           14         MOV     IP, #00000010B
+0113 D28C             15         SETB    TR0
+0115 F590             16         MOV     P1, A
+0117 80FE             17         SJMP        $
+0119                  18     TIMER0:
+0119 D805             19         DJNZ    R0, LOOP
+011B 7814             20         MOV     R0, #20
+011D F590             21         MOV     P1, A
+011F 23               22         RL      A
+0120                  23     LOOP:
+0120 758C3C           24         MOV     TH0, #3CH
+0123 758AB0           25         MOV     TL0, #0B0H
+0126 32               26         RETI
+                      27     END
+A51 MACRO ASSEMBLER  __________                                                           05/07/2020 21:21:10 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+IE . . . . . . . .  D ADDR   00A8H   A   
+IP . . . . . . . .  D ADDR   00B8H   A   
+LOOP . . . . . . .  C ADDR   0120H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+START. . . . . . .  C ADDR   0100H   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TIMER0 . . . . . .  C ADDR   0119H   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

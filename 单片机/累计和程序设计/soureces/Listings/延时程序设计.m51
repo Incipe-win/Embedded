@@ -1,0 +1,46 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/21/2020  21:26:52  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE ..\output\累计和程序设计.obj TO ..\output\延时程序设计 PRINT (.\Listings\延时程序设计.m51)
+
+
+INPUT MODULES INCLUDED:
+  ..\output\累计和程序设计.obj (______________)
+
+
+LINK MAP OF MODULE:  ..\output\延时程序设计 (______________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     030CH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  ..\output\延时程序设计 (______________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ______________
+  C:0300H         SYMBOL        ABC
+  C:0305H         SYMBOL        LOOP
+  C:0000H         LINE#         2
+  C:0300H         LINE#         6
+  C:0302H         LINE#         7
+  C:0304H         LINE#         8
+  C:0305H         LINE#         10
+  C:0306H         LINE#         11
+  C:0307H         LINE#         12
+  C:0309H         LINE#         13
+  C:030BH         LINE#         14
+  -------         ENDMOD        ______________
+
+Program Size: data=8.0 xdata=0 code=780
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

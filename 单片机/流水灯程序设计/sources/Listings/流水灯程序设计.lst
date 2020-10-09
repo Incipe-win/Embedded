@@ -1,0 +1,55 @@
+A51 MACRO ASSEMBLER  ______________                                                       03/21/2020 21:36:56 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\流水灯程序设计.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE 流水灯程序设计.asm SET(SMALL) DEBUG PRINT(.\Listings\流水灯程序设计.lst
+                      ) OBJECT(..\output\流水灯程序设计.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG 0000H
+0000 020300            2         LJMP    START
+                       3     
+0300                   4         ORG 0300H
+0300                   5     START:
+0300 74FE              6         MOV     A, #0FEH
+                       7     
+0302                   8     OUTPUT:
+0302 F590              9         MOV     P1, A
+0304 23               10         RL      A
+0305 12030B           11         LCALL   Delay
+0308 020302           12         LJMP    OUTPUT
+                      13     
+030B                  14     Delay:
+030B 7C04             15         MOV     R4, #4
+030D                  16     L1:
+030D 7E00             17         MOV     R6, #0
+030F 7F00             18         MOV     R7, #0
+                      19     
+0311                  20     DLoop:
+0311 DFFE             21         DJNZ    R7, DLoop
+0313 DEFC             22         DJNZ    R6, DLoop
+0315 DCF6             23         DJNZ    R4, L1
+0317 22               24         RET
+                      25         END
+A51 MACRO ASSEMBLER  ______________                                                       03/21/2020 21:36:56 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .  C ADDR   030BH   A   
+DLOOP. . . . . . .  C ADDR   0311H   A   
+L1 . . . . . . . .  C ADDR   030DH   A   
+OUTPUT . . . . . .  C ADDR   0302H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+START. . . . . . .  C ADDR   0300H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

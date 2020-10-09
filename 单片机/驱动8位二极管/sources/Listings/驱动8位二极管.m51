@@ -1,0 +1,39 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/31/2020  10:31:31  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE ..\output\驱动8位二极管.obj TO ..\output\驱动8位二极管 PRINT (.\Listings\驱动8位二极管.m51)
+
+
+INPUT MODULES INCLUDED:
+  ..\output\驱动8位二极管.obj (____8________)
+
+
+LINK MAP OF MODULE:  ..\output\驱动8位二极管 (____8________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0013H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  ..\output\驱动8位二极管 (____8________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ____8________
+  C:000AH         SYMBOL        DELAY
+  C:000CH         SYMBOL        DELAY11
+  D:0090H         SYMBOL        P1
+  C:0002H         SYMBOL        UP
+  -------         ENDMOD        ____8________
+
+Program Size: data=8.0 xdata=0 code=19
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

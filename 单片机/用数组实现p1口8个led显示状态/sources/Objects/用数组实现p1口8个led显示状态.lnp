@@ -1,0 +1,3 @@
+".\Objects\用数组实现p1口8个led显示状态.obj" 
+TO ".\Objects\用数组实现p1口8个led显示状态" 
+PRINT(".\Listings\用数组实现p1口8个led显示状态.m51")

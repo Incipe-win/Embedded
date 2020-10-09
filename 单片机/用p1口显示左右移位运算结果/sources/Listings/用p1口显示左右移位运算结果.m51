@@ -1,0 +1,95 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/19/2020  10:42:52  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\用p1口显示左右移位运算结果.obj TO .\Objects\用p1口显示左右移位运算结果 PRINT (.\Li
+>> stings\用p1口显示左右移位运算结果.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\用p1口显示左右移位运算结果.obj (__P1______________________)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  .\Objects\用p1口显示左右移位运算结果 (__P1______________________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0020H     UNIT         ?PR?DELAY?__P1______________________
+            CODE    0023H     0017H     UNIT         ?PR?MAIN?__P1______________________
+            CODE    003AH     0016H     UNIT         ?C?LIB_CODE
+            CODE    0050H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\用p1口显示左右移位运算结果 (__P1______________________)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?__P1______________________
+
+?PR?MAIN?__P1______________________
+  +--> ?PR?DELAY?__P1______________________
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\用p1口显示左右移位运算结果 (__P1______________________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        __P1______________________
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0009H         PUBLIC        delay
+  C:0023H         PUBLIC        main
+  -------         PROC          L?0008
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/19/2020  10:42:52  PAGE 2
+
+
+  -------         ENDPROC       L?0008
+  -------         PROC          DELAY
+  -------         DO            
+  D:0082H         SYMBOL        i
+  -------         ENDDO         
+  C:0009H         LINE#         3
+  C:0009H         LINE#         5
+  C:001FH         LINE#         7
+  C:0022H         LINE#         8
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  C:0023H         LINE#         10
+  C:0023H         LINE#         11
+  C:0023H         LINE#         12
+  C:0026H         LINE#         13
+  C:0029H         LINE#         14
+  C:002FH         LINE#         15
+  C:0032H         LINE#         16
+  C:0032H         LINE#         17
+  C:0035H         LINE#         18
+  C:0035H         LINE#         19
+  C:0038H         LINE#         20
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        __P1______________________
+
+  -------         MODULE        ?C?SLCMP
+  C:003AH         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+Program Size: data=9.0 xdata=0 code=92
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

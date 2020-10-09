@@ -1,0 +1,46 @@
+C51 COMPILER V9.60.0.0   __WHILE____P1__8__LED________                                     04/19/2020 11:13:52 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE __WHILE____P1__8__LED________
+OBJECT MODULE PLACED IN .\Objects\用while实现p1口8只led显示状态.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE 用while实现p1口8只led显示状态.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXT
+                    -END PRINT(.\Listings\用while实现p1口8只led显示状态.lst) TABS(2) OBJECT(.\Objects\用while实现p1口8只led显示状态.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          void delay() {
+   4   1        unsigned char i, j;
+   5   1        for (i = 0; i < 200; ++i) {
+   6   2          for (j = 0; j < 250; ++j) {
+   7   3            ;
+   8   3          }
+   9   2        }
+  10   1      }
+  11          
+  12          void main() {
+  13   1        unsigned char i;
+  14   1        while (1) {
+  15   2          i = 0;
+  16   2          while (i < 0x64) {
+  17   3            P1 = i;
+  18   3            delay();
+  19   3            ++i;
+  20   3          }
+  21   2        }
+  22   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     51    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

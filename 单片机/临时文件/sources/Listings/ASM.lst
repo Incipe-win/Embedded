@@ -1,0 +1,35 @@
+A51 MACRO ASSEMBLER  ASM                                                                  03/30/2020 14:31:34 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\ASM.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE ASM.asm SET(SMALL) DEBUG PRINT(.\Listings\ASM.lst) OBJECT(..\output\ASM
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG     0000
+0000 028000            2         LJMP    START
+                       3     
+8000                   4         ORG     8000H
+8000                   5     START:
+8000 79FA              6         MOV     R1, #250
+8002 770C              7             MOV             @R1, #12
+8004 AAFA              8         MOV     R2, 250
+8006 0100              9             AJMP    START
+                      10         END
+A51 MACRO ASSEMBLER  ASM                                                                  03/30/2020 14:31:34 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+START. . . . . . .  C ADDR   8000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

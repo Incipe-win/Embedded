@@ -1,0 +1,3 @@
+".\Objects\用for实现蜂鸣器发出1khz的音频.obj" 
+TO ".\Objects\用for实现蜂鸣器发出1khz的音频" 
+PRINT(".\Listings\用for实现蜂鸣器发出1khz的音频.m51")

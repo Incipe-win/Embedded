@@ -1,0 +1,58 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/21/2020  20:56:04  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE ..\output\单键查询.obj TO ..\output\单键查询 PRINT (.\Listings\单键查询.m51)
+
+
+INPUT MODULES INCLUDED:
+  ..\output\单键查询.obj (________)
+
+
+LINK MAP OF MODULE:  ..\output\单键查询 (________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0055H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  ..\output\单键查询 (________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ________
+  C:003AH         SYMBOL        ABC
+  C:004AH         SYMBOL        D1
+  C:004CH         SYMBOL        D2
+  D:0090H         SYMBOL        P1
+  C:0030H         SYMBOL        START
+  C:0048H         SYMBOL        TIME
+  C:0000H         LINE#         2
+  C:0030H         LINE#         6
+  C:0032H         LINE#         7
+  C:0035H         LINE#         8
+  C:0038H         LINE#         9
+  C:003AH         LINE#         11
+  C:003DH         LINE#         12
+  C:0040H         LINE#         13
+  C:0043H         LINE#         14
+  C:0046H         LINE#         15
+  C:0048H         LINE#         18
+  C:004AH         LINE#         20
+  C:004CH         LINE#         22
+  C:004EH         LINE#         23
+  C:0050H         LINE#         24
+  C:0052H         LINE#         25
+  C:0054H         LINE#         26
+  -------         ENDMOD        ________
+
+Program Size: data=8.0 xdata=0 code=85
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

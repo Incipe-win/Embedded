@@ -1,0 +1,3 @@
+"..\output\RL.obj" 
+TO "..\output\临时文件" 
+PRINT(".\Listings\临时文件.m51")

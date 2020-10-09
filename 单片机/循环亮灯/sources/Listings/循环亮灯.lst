@@ -1,0 +1,49 @@
+A51 MACRO ASSEMBLER  ________                                                             03/21/2020 17:44:09 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\—≠ª∑¡¡µ∆.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE —≠ª∑¡¡µ∆.asm SET(SMALL) DEBUG PRINT(.\Listings\—≠ª∑¡¡µ∆.lst) OBJECT(..\
+                      output\—≠ª∑¡¡µ∆.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1         ORG     0000
+0000 020100            2         LJMP    LOOP
+0100                   3         ORG     0100H
+0100                   4     LOOP:
+0100 75900F            5         MOV     P1, #00001111B
+0103 12010E            6         LCALL   TIME
+0106 7590F0            7         MOV     P1, #11110000B
+0109 12010E            8         LCALL   TIME
+010C 80F2              9         SJMP    LOOP
+010E                  10     TIME:
+010E 7DC8             11         MOV     R5, #200
+0110                  12     D1:
+0110 7E14             13         MOV     R6, #20
+0112                  14     D2:
+0112 7FF8             15         MOV     R7, #248
+0114 DFFE             16         DJNZ    R7, $
+0116 DEFA             17         DJNZ    R6, D2
+0118 DDF6             18         DJNZ    R5, D1
+011A 22               19         RET
+                      20         END
+A51 MACRO ASSEMBLER  ________                                                             03/21/2020 17:44:09 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+D1 . . . . . . . .  C ADDR   0110H   A   
+D2 . . . . . . . .  C ADDR   0112H   A   
+LOOP . . . . . . .  C ADDR   0100H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+TIME . . . . . . .  C ADDR   010EH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

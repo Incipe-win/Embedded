@@ -1,0 +1,59 @@
+A51 MACRO ASSEMBLER  __________                                                           03/31/2020 11:12:37 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN ..\output\八段二极管.obj
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE 八段二极管.asm SET(SMALL) DEBUG PRINT(.\Listings\八段二极管.lst) OBJECT
+                      (..\output\八段二极管.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     UP0:
+0000 7C0A              2         MOV     R4, #10
+0002 7A00              3         MOV     R2, #00H
+0004 900013            4         MOV     DPTR, #TAB
+0007                   5     UP:
+0007 EA                6         MOV     A, R2
+0008 93                7         MOVC    A, @A+DPTR
+0009 F580              8         MOV     P0, A
+000B 12001D            9         LCALL   D1S
+000E 0A               10         INC     R2
+000F DCF6             11         DJNZ    R4, UP
+0011 80ED             12         SJMP    UP0
+0013                  13     TAB:
+0013 3F065B4F         14         DB 3FH, 06H, 5BH, 4FH, 66H, 6DH, 7DH, 07H, 7FH, 6FH
+0017 666D7D07                
+001B 7F6F                    
+                      15     
+001D                  16     D1S:
+001D 7D0A             17         MOV R5,#10          ;1
+001F                  18     DLY1:
+001F 7EC8             19         MOV R6,#200         ;1*10
+0021                  20     DLY2:
+0021 7FF8             21         MOV R7,#248         ;1*200*10
+0023 DFFE             22         DJNZ R7,$           ;2*248*200*10
+0025 DEFA             23         DJNZ R6,DLY2        ;2*200*10
+0027 DDF6             24         DJNZ R5,DLY1        ;2*10
+0029 22               25         RET                 ;2
+                      26     END
+A51 MACRO ASSEMBLER  __________                                                           03/31/2020 11:12:37 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+D1S. . . . . . . .  C ADDR   001DH   A   
+DLY1 . . . . . . .  C ADDR   001FH   A   
+DLY2 . . . . . . .  C ADDR   0021H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+TAB. . . . . . . .  C ADDR   0013H   A   
+UP . . . . . . . .  C ADDR   0007H   A   
+UP0. . . . . . . .  C ADDR   0000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

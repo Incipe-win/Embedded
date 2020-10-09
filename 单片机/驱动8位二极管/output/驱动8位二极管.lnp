@@ -1,0 +1,3 @@
+"..\output\驱动8位二极管.obj" 
+TO "..\output\驱动8位二极管" 
+PRINT(".\Listings\驱动8位二极管.m51")

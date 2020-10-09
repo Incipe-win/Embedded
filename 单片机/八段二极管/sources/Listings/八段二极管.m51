@@ -1,0 +1,72 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/21/2020  20:33:41  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE ..\output\八段二极管.obj TO ..\output\八段二极管 PRINT (.\Listings\八段二极管.m51)
+
+
+INPUT MODULES INCLUDED:
+  ..\output\八段二极管.obj (__________)
+
+
+LINK MAP OF MODULE:  ..\output\八段二极管 (__________)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     014BH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  ..\output\八段二极管 (__________)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        __________
+  C:0140H         SYMBOL        D1
+  C:0142H         SYMBOL        D2
+  D:0080H         SYMBOL        P0
+  C:0100H         SYMBOL        START
+  C:013EH         SYMBOL        TIME
+  C:0000H         LINE#         2
+  C:0100H         LINE#         6
+  C:0103H         LINE#         7
+  C:0106H         LINE#         8
+  C:0109H         LINE#         9
+  C:010CH         LINE#         10
+  C:010FH         LINE#         11
+  C:0112H         LINE#         12
+  C:0115H         LINE#         13
+  C:0118H         LINE#         14
+  C:011BH         LINE#         15
+  C:011EH         LINE#         16
+  C:0121H         LINE#         17
+  C:0124H         LINE#         18
+  C:0127H         LINE#         19
+  C:012AH         LINE#         20
+  C:012DH         LINE#         21
+  C:0130H         LINE#         22
+  C:0133H         LINE#         23
+  C:0136H         LINE#         24
+  C:0139H         LINE#         25
+  C:013CH         LINE#         26
+  C:013EH         LINE#         29
+  C:0140H         LINE#         31
+  C:0142H         LINE#         33
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/21/2020  20:33:41  PAGE 2
+
+
+  C:0144H         LINE#         34
+  C:0146H         LINE#         35
+  C:0148H         LINE#         36
+  C:014AH         LINE#         37
+  -------         ENDMOD        __________
+
+Program Size: data=8.0 xdata=0 code=331
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
